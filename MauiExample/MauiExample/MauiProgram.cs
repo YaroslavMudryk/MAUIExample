@@ -28,6 +28,9 @@ public static class MauiProgram
 		builder.Services.AddSingleton<FlashlightPage>();
 		builder.Services.AddSingleton<IFlashlight>(Flashlight.Default);
 
+		builder.Services.AddSingleton<VibrationPage>();
+		builder.Services.AddSingleton<IVibration>(Vibration.Default);
+
 		return builder.Build();
 	}
 }

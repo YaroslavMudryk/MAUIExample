@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiExample.Views.VibrationPage"
+             Title="VibrationPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Entry
+                Grid.Row="0"
+                x:Name="countOfAttempts"
+                HeightRequest="200"
+                HorizontalTextAlignment="Center"
+                Placeholder="Кількість повторень"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+        <Entry
+                Grid.Row="1"
+                x:Name="durationOfAttempts"
+                HeightRequest="200"
+                HorizontalTextAlignment="Center"
+                Placeholder="Тривалість повтореня (мс)"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+
+        <Button 
+                Grid.Row="2" Text="Почати" x:Name="buttonStart" Clicked="buttonStart_Clicked"/>
+
+    </Grid>
+</ContentPage>

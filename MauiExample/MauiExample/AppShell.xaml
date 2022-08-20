@@ -37,6 +37,12 @@
             Title="Flashlight"
             Icon="flashlight.png"
             ContentTemplate="{DataTemplate views:FlashlightPage}"/>
+        <ShellContent
+            Route="vibration"
+            Title="Vibration"
+            Icon="vibration.png"
+            ContentTemplate="{DataTemplate views:VibrationPage}"/>
+        
 
 
     </FlyoutItem>
