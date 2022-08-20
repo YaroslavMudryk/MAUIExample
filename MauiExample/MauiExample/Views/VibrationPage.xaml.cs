@@ -7,12 +7,12 @@ public partial class VibrationPage : ContentPage
 	{
 		InitializeComponent();
 		_vibration = vibration;
+
         if (!_vibration.IsSupported)
         {
             buttonStart.IsEnabled = false;
             DisplayAlert("Помилка", "Вібрація не підртимується даним пристроєм", "OK");
         }
-
 	}
 
 	private async void buttonStart_Clicked(object sender, EventArgs e)

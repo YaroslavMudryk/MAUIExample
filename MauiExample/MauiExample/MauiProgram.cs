@@ -1,5 +1,5 @@
 ﻿using MauiExample.Views;
-using Microsoft.Maui.Devices;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MauiExample;
 
@@ -31,6 +31,12 @@ public static class MauiProgram
 		builder.Services.AddSingleton<VibrationPage>();
 		builder.Services.AddSingleton<IVibration>(Vibration.Default);
 
-		return builder.Build();
+        builder.Services.AddSingleton<ContactsPage>();
+        builder.Services.AddSingleton<IContacts>(Contacts.Default);
+        builder.Services.AddSingleton<IMap>(Map.Default);
+        builder.Services.AddSingleton<IGeolocation>(Geolocation.Default);
+		builder.Services.AddSingleton<IShare>(Share.Default);
+
+        return builder.Build();
 	}
 }

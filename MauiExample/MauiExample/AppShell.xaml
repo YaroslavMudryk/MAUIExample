@@ -12,8 +12,7 @@
         <controls:FlyoutHeader/>
     </Shell.FlyoutHeader>
 
-    <FlyoutItem Route="features" FlyoutDisplayOptions="AsMultipleItems">
-
+    <FlyoutItem Route="devices" FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent
             Route="battery"
             Title="Battery"
@@ -41,10 +40,15 @@
             Route="vibration"
             Title="Vibration"
             Icon="vibration.png"
-            ContentTemplate="{DataTemplate views:VibrationPage}"/>
-        
+            ContentTemplate="{DataTemplate views:VibrationPage}"/>        
+    </FlyoutItem>
 
-
+    <FlyoutItem Route="communications" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+            Route="contacts"
+            Title="Testing"
+            Icon="testing.png"
+            ContentTemplate="{DataTemplate views:ContactsPage}"/>
     </FlyoutItem>
     
 </Shell>
