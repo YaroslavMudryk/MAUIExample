@@ -11,7 +11,6 @@ public partial class DevicePage : ContentPage
 		InitializeComponent();
 		_deviceInfo = deviceInfo;
         Init();
-
     }
 
 	private void Init()
@@ -22,7 +21,6 @@ public partial class DevicePage : ContentPage
         sb.AppendLine($"Manufacturer: {_deviceInfo.Manufacturer}");
         sb.AppendLine($"Name: {_deviceInfo.Name}");
         sb.AppendLine($"OS Version: {_deviceInfo.VersionString}");
-        sb.AppendLine($"Refresh Rate: {DeviceInfo.Current}");
         sb.AppendLine($"Idiom: {_deviceInfo.Idiom}");
         sb.AppendLine($"Platform: {_deviceInfo.Platform}");
 
