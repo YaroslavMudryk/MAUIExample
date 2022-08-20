@@ -22,6 +22,9 @@ public static class MauiProgram
         builder.Services.AddSingleton<DisplayPage>();
         builder.Services.AddSingleton<IDeviceDisplay>(DeviceDisplay.Current);
 
+		builder.Services.AddSingleton<DevicePage>();
+		builder.Services.AddSingleton<IDeviceInfo>(DeviceInfo.Current);
+
 		return builder.Build();
 	}
 }

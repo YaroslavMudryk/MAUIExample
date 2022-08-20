@@ -26,7 +26,11 @@
             Icon="display.png"
             ContentTemplate="{DataTemplate views:DisplayPage}"/>
 
-
+        <ShellContent
+            Route="device"
+            Title="Device"
+            Icon="device.png"
+            ContentTemplate="{DataTemplate views:DevicePage}"/>
 
 
     </FlyoutItem>
