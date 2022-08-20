@@ -25,6 +25,9 @@ public static class MauiProgram
 		builder.Services.AddSingleton<DevicePage>();
 		builder.Services.AddSingleton<IDeviceInfo>(DeviceInfo.Current);
 
+		builder.Services.AddSingleton<FlashlightPage>();
+		builder.Services.AddSingleton<IFlashlight>(Flashlight.Default);
+
 		return builder.Build();
 	}
 }

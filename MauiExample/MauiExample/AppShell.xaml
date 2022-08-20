@@ -32,6 +32,12 @@
             Icon="device.png"
             ContentTemplate="{DataTemplate views:DevicePage}"/>
 
+        <ShellContent
+            Route="flashlight"
+            Title="Flashlight"
+            Icon="flashlight.png"
+            ContentTemplate="{DataTemplate views:FlashlightPage}"/>
+
 
     </FlyoutItem>
     
