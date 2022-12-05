@@ -1,3 +1,4 @@
+using MauiExample.Services;
 using System.Text;
 
 namespace MauiExample.Views;
@@ -5,11 +6,13 @@ namespace MauiExample.Views;
 public partial class DevicePage : ContentPage
 {
 	private readonly IDeviceInfo _deviceInfo;
+    private readonly IDeviceId _deviceId;
 
-	public DevicePage(IDeviceInfo deviceInfo)
+    public DevicePage(IDeviceInfo deviceInfo, IDeviceId deviceId)
 	{
 		InitializeComponent();
 		_deviceInfo = deviceInfo;
+        _deviceId = deviceId;
         Init();
     }
 
@@ -31,7 +34,8 @@ public partial class DevicePage : ContentPage
             _ => false
         };
 
-        sb.AppendLine($"Virtual device? {isVirtual}");
+        sb.AppendLine($"Virtual device: {isVirtual}");
+        sb.AppendLine($"Device ID: {_deviceId.GetDeviceId()}");
 
         deviceDetailsLabel.Text = sb.ToString();
     }
